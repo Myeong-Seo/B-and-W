@@ -11,9 +11,15 @@ public class MainController {
 	public String main() {
 		return "main";
 	}
+
 	@GetMapping("/login")
 	public String login(Model model) {
 		model.addAttribute("loginpage","B & W 로그인");
 		return "login";
+	
+	@GetMapping("/recoverUserInfo")
+	public String move_recoverUserInfo() {
+		return "recoverUserInfo";
+
 	}
 }
