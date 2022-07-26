@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+
+<title>B & W 로그인</title>
+</head>
+<body>
+	<div th:replace="/navi/header"></div>
+	<div id="div1">
+	<br><br><br><br><br><br>
+		<h1 th:text="${loginpage}" align="center"></h1>
+		아이디 &emsp;&emsp;<input type="text" name="id" size="20" placeholder=" 아이디를 입력해주세요."><br>
+		비밀번호 &emsp;<input type="password" name="password" size="20" placeholder=" 비밀번호를 입력해주세요."><br><br>
+		<button id="login" onclick="location.href='/login'">로 그 인</button><br><br>
+		<button id="sub1">회원가입</button>
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<button id="sub2" >아이디 / 비밀번호 찾기</button>
+	</div>
+	<div th:replace="/navi/footer"></div>
+</body>
+</html>
