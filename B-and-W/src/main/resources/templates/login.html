@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link th:href="@{/css/login.css}" rel="stylesheet">
+<link th:href="@{/css/main.css}" rel="stylesheet">
 
 <title>B & W 로그인</title>
 </head>
@@ -16,7 +17,7 @@
 		<button id="login" onclick="location.href='/login'">로 그 인</button><br><br>
 		<button id="sub1">회원가입</button>
 		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-		<button id="sub2" >아이디 / 비밀번호 찾기</button>
+		<button id="sub2" onclick="location.href='/recover_userinfo'" >아이디 / 비밀번호 찾기</button>
 	</div>
 	<div th:replace="/navi/footer"></div>
 </body>

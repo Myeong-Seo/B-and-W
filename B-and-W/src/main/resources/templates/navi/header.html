@@ -2,7 +2,7 @@
     <div class="hd_wd">
 		<a href="/main"><img th:src="@{/images/logo.png}" width="100"></a>
 		<div th:if="${session.ssui == null}" class="ic_on">
-		<button id="sub1">로그인</button>
+		<button id="sub1" onclick="location.href='/login'">로그인</button>
         <button id="sub1">회원가입</button>
 		</div>
 		<div th:unless="${session.ssui == null}" class="ic_off">

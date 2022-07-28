@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 *{
 	list-style: none;
 }
@@ -47,16 +46,6 @@ input{
 	font-size:16px;
 	font-weight:bold;
 }
-#hd_bu1{
-	border: 0;
-	background-color:transparent;
-	cursor:pointer;
-	font-size:16px;
-	font-weight:bold;
-	position: fixed;
-	top: -10px;
-	
-}
 
 .fright{
     float: right;
@@ -78,7 +67,7 @@ ul{
     width: 1620px;
 }
 #header .ic_on{
-    padding: 0px;
+    padding: 30px 0;
     text-align: right;
 }
 #header .ic_on a{
@@ -141,56 +130,4 @@ ul{
 #footer .ft_wd .ft_text2 .copyright{
     margin-top: 3px;
     color: #3f3f3f;
-}
-
-.table_caption {
-	font-family: Arial, Sans-serif;
-	font-size: 25px;
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-
-.table_header_1 {
-	font-family: Arial, Sans-serif;
-	margin-top : 5px;
-}
-
-.table_body {
-	margin: 0px;
-	padding-left: 60px;
-}
-
-input.recover_submit {
-	background-color: #FFEA00; /* Green */
-	border: 2px solid black;
-	border-radius: 10px;
-	color: black;
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 13px;
-}
-
-input.user_id {
-	padding: 10px;
-	border: 1px solid black;
-	border-radius: 10px;
-}
-
-
-table {
-	font-family: Arial, Sans-serif;
-	border: 2px solid black;
-	padding: 15px;
-	border-radius: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20%;
-}
-
-tfoot {
-	float: right;
-	right: 0px;
-
 }
