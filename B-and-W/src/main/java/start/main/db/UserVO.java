@@ -1,5 +1,6 @@
 package start.main.db;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="user")
 public class UserVO {
+
 	
 	@Id
 	@Column(name = "u_id", nullable = false)
@@ -38,5 +40,5 @@ public class UserVO {
 	
 	@OneToMany(mappedBy = "u_id")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
-	
+
 }

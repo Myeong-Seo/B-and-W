@@ -6,10 +6,8 @@ import java.time.format.DateTimeFormatter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +23,6 @@ import lombok.Setter;
 @Entity(name = "reserve")
 public class ReserveVO {
 
-	
 	@Id
 	@Column
 	private Long s_index;
