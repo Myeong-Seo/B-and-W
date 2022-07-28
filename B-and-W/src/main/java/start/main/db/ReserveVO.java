@@ -1,16 +1,13 @@
 package start.main.db;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 @AllArgsConstructor
@@ -20,8 +17,12 @@ import lombok.Setter;
 @Setter
 @Entity(name = "reserve")
 public class ReserveVO {
-
-	@Column(name = "u_id")
+	
+	//1:1? 1:다? 다:1? 다:다?
+	//@OneToMany
+	//@JoinColumn(name = "u_id")
+	//@Id
+	@Column
 	private String u_id;
 	
 	@Column(name = "s_name", nullable = false)
