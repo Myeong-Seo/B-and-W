@@ -2,16 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<link th:href="@{/style.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
 
 <title>B & W</title>
 </head>
 <!-- <script type="text/javascript" th:src="@{/ajax.js}"></script> -->
 <body>
-	<button id="logo"><img src="/images/logo.png"/></button>
+	<div th:replace="/navi/header"></div>
+	<!-- <button id="logo"><img src="/images/logo.png"/></button> -->
 	main입니다.
 	
 	<button onclick="location.href='/login'">로그인</button>
 	<button onclick="location.href='/login'">회원가입</button>
+	<div th:replace="/navi/footer"></div>
 </body>
 </html>
