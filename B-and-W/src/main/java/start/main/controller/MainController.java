@@ -20,7 +20,7 @@ public class MainController {
 	}
 	@GetMapping("/recoverUserInfo")
 	public String move_recoverUserInfo() {
-		return "recoverUserInfo";
+		return "recover_User_Info";
 
 	}
 }
