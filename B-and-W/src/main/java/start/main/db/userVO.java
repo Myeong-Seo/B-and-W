@@ -26,5 +26,5 @@ public class userVO {
 	private String u_addr;
 	@Column(name="u_number")
 	private String u_number;
-	
+	// git
 }
