@@ -16,10 +16,13 @@ public class MainController {
 	public String login(Model model) {
 		model.addAttribute("loginpage","B & W 로그인");
 		return "login";
+		
 	}
+
 	
 	@GetMapping("/recover_userinfo")
 	public String move_recover_userinfo() {
 		return "recover_userinfo";
+
 	}
 }
