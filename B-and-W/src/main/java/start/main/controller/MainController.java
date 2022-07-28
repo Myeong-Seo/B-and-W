@@ -17,7 +17,7 @@ public class MainController {
 		model.addAttribute("loginpage","B & W 로그인");
 		return "login";
 	}
-	// 교체
+	// 교체 test
 	@GetMapping("/recover_userinfo")
 	public String move_recover_userinfo() {
 		return "recover_userinfo";
