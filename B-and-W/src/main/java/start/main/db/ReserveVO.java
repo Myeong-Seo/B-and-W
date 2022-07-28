@@ -2,6 +2,7 @@ package start.main.db;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -19,14 +20,19 @@ import lombok.Setter;
 @Entity(name = "reserve")
 public class ReserveVO {
 	
+	@Id
+	@Column
+	private Long s_index;
+	
 	//1:1? 1:다? 다:1? 다:다?
 	@ManyToOne
 	@JoinColumn(name = "u_id")
-	@Column
-	private userVO u_id;
+	private UserVO u_id;
+	//private UesrVO u_id;
 	
 	@Column(name = "s_name", nullable = false)
 	private String s_name;
+	//private ShopVO s_name;
 	
 	@Column(name = "re_service", nullable = false)
 	private String re_service;
