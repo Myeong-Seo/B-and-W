@@ -2,12 +2,13 @@ package start.main.db;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import lombok.Setter;
 
 @AllArgsConstructor
@@ -19,11 +20,10 @@ import lombok.Setter;
 public class ReserveVO {
 	
 	//1:1? 1:다? 다:1? 다:다?
-	//@OneToMany
-	//@JoinColumn(name = "u_id")
-	//@Id
+	@ManyToOne
+	@JoinColumn(name = "u_id")
 	@Column
-	private String u_id;
+	private userVO u_id;
 	
 	@Column(name = "s_name", nullable = false)
 	private String s_name;
