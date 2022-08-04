@@ -2,18 +2,19 @@ package start.main.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import javax.transaction.Transactional;
 
-import lombok.AllArgsConstructor;
 import start.main.db.UserVO;
-import start.main.repository.SDJpaUserRepository;
+import start.main.repository.UserRepository;
 
-@AllArgsConstructor
-@Service
+@Transactional
 public class UserService {
 	
-	private SDJpaUserRepository userRepository;
+	private final UserRepository userRepository;
+
+	public UserService(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
 
 	public void join_Member(UserVO member) {
 		userRepository.save(member);
