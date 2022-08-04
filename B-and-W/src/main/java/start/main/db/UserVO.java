@@ -21,22 +21,22 @@ import lombok.NoArgsConstructor;
 public class UserVO {
 	
 	@Id
-	@Column(name = "u_id", nullable = false)
-	private String u_id;
+	@Column(name = "uId", nullable = false)
+	private String uId;
 	
-	@Column(name="u_pwd", nullable = false)
-	private String u_pwd;
+	@Column(name="uPwd", nullable = false)
+	private String uPwd;
 	
-	@Column(name="u_name", nullable = false)
-	private String u_name;
+	@Column(name="uName", nullable = false)
+	private String uName;
 	
-	@Column(name="u_addr", nullable = false)
-	private String u_addr;
+	@Column(name="uAddr", nullable = false)
+	private String uAddr;
 	
-	@Column(name="u_number")
-	private String u_number;
+	@Column(name="uNumber")
+	private String uNumber;
 	
-	@OneToMany(mappedBy = "u_id")
+	@OneToMany(mappedBy = "uId")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 	
 }

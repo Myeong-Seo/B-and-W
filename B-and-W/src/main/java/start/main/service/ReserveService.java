@@ -6,14 +6,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import start.main.db.ReserveRepo;
+import start.main.db.ReserveRepository;
 import start.main.db.ReserveVO;
 
 @Service
 public class ReserveService {
 
 	@Autowired
-	ReserveRepo reserveRepo;
+	ReserveRepository reserveRepo;
 	
 	public List<ReserveVO> findAll(){
 		List<ReserveVO> shop = new ArrayList<>();
