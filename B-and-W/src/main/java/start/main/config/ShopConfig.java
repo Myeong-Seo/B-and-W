@@ -4,16 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import start.main.db.ShopRepository;
+import start.main.repository.SDJShopRepository;
 import start.main.service.ShopService;
 
 @Configuration
 public class ShopConfig {
 	
-	private ShopRepository shopRepository;
+	private SDJShopRepository shopRepository;
 	
 	@Autowired
-	public ShopConfig(ShopRepository shopRepository) {
+	public ShopConfig(SDJShopRepository shopRepository) {
 		this.shopRepository = shopRepository;
 	}
 	

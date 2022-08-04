@@ -6,12 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import start.main.db.UserVO;
 
-public interface SDJpaUserRepository extends JpaRepository<UserVO, String>, UserRepository{
+public interface SDJUserRepository extends JpaRepository<UserVO, String>, UserRepository{
 	
 	@Override
-	Optional<UserVO> findById(String u_id);
+	Optional<UserVO> findById(String uId);
 	
 	@Override
-	Optional<UserVO> findByName(String u_name);
+	Optional<UserVO> findByName(String uName);
 	
 }

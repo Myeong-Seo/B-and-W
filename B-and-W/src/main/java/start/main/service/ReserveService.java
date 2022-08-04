@@ -3,26 +3,32 @@ package start.main.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import start.main.db.ReserveRepository;
 import start.main.db.ReserveVO;
+import start.main.repository.SDJReserveRepository;
 
-@Service
+@Transactional
 public class ReserveService {
 
 	@Autowired
-	ReserveRepository reserveRepo;
+	SDJReserveRepository reserveRepository;
 	
+	public ReserveService(SDJReserveRepository reserveRepository) {
+		this.reserveRepository = reserveRepository;
+	}
+
 	public List<ReserveVO> findAll(){
 		List<ReserveVO> shop = new ArrayList<>();
-		reserveRepo.findAll().forEach(e -> shop.add(e));
+		reserveRepository.findAll().forEach(e -> shop.add(e));
 		return shop;
 	}
 	
 	public ReserveVO InsertShop(ReserveVO reserve) {
-		return reserveRepo.save(reserve);
+		return reserveRepository.save(reserve);
 	}
 	
 //	public Optional<ReserveVO> findById(String name){
