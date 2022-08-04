@@ -17,11 +17,11 @@ import lombok.NoArgsConstructor;
 public class UserVO {
 	@Id
 	@Column(name = "u_id", nullable = false)
-	private String u_id;
+	private String id;
 	@Column(name="u_pwd", nullable = false)
 	private String u_pwd;
 	@Column(name="u_name", nullable = false)
-	private String u_name;
+	private String name;
 	@Column(name="u_addr", nullable = false)
 	private String u_addr;
 	@Column(name="u_number")

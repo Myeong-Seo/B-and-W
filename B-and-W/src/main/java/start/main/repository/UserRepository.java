@@ -6,7 +6,7 @@ import java.util.Optional;
 import start.main.db.UserVO;
 
 public interface UserRepository {
-	UserVO join(UserVO member);
+	UserVO save(UserVO member);
 	Optional<UserVO> findById(String u_id);
 	Optional<UserVO> findByName(String u_name);
 	List<UserVO> findAll();
