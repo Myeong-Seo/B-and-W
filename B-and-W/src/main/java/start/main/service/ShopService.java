@@ -4,30 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import javax.transaction.Transactional;
 
-import start.main.db.ShopRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import start.main.db.ShopRepository;
 import start.main.db.ShopVO;
 
-@Service
+@Transactional
 public class ShopService {
 
 	@Autowired
-	ShopRepo shopRepo;
+	private final ShopRepository shopRepository;
+	
+	public ShopService(ShopRepository shopRepository) {
+		this.shopRepository = shopRepository;
+	}
+
+	public ShopVO save(ShopVO shop) {
+		return shopRepository.save(shop);
+	}
 	
 	public List<ShopVO> findAll(){
 		List<ShopVO> shop = new ArrayList<>();
-		shopRepo.findAll().forEach(e -> shop.add(e));
+		shopRepository.findAll().forEach(e -> shop.add(e));
 		return shop;
 	}
 	
-	public ShopVO InsertShop(ShopVO shop) {
-		return shopRepo.save(shop);
-	}
+	//public Optional<ShopVO> findByName(String name){
+	//	return 
+	//}
 	
 	public Optional<ShopVO> findById(Long index){
-		return shopRepo.findById(index); 
+		return shopRepository.findById(index); 
 	}
 	
 	

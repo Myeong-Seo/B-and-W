@@ -23,23 +23,22 @@ public class UserVO {
 
 	
 	@Id
-	@Column(name = "u_id", nullable = false)
-	private String id;
-
-	@Column(name="u_pwd", nullable = false)
-	private String u_pwd;
+	@Column(name = "uId", nullable = false)
+	private String uId;
 	
-	@Column(name="u_name", nullable = false)
-
-	private String name;
-  
-	@Column(name="u_addr", nullable = false)
-	private String u_addr;
+	@Column(name="uPwd", nullable = false)
+	private String uPwd;
 	
-	@Column(name="u_number")
-	private String u_number;
+	@Column(name="uName", nullable = false)
+	private String uName;
 	
-	@OneToMany(mappedBy = "u_id")
+	@Column(name="uAddr", nullable = false)
+	private String uAddr;
+	
+	@Column(name="uNumber")
+	private String uNumber;
+	
+	@OneToMany(mappedBy = "uId")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 
 }

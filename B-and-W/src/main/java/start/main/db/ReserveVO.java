@@ -1,8 +1,5 @@
 package start.main.db;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -25,32 +22,31 @@ public class ReserveVO {
 
 	@Id
 	@Column
-	private Long s_index;
-	
+	private Long sIndex;
+
 	//1:1? 1:다? 다:1? 다:다?
 	@ManyToOne
-	@JoinColumn(name = "u_id")
-	private UserVO u_id;
-	//private UesrVO u_id;
+	@JoinColumn(name = "uId")
+	private UserVO uId;
+
+
+	@Column(name = "sName", nullable = false)
+	private String sName;
+
+	@Column(name = "reService", nullable = false)
+	private String reService;
 	
-	@Column(name = "s_name", nullable = false)
-	private String s_name;
-	//private ShopVO s_name;
+	@Column(name = "sNumber", nullable = false)
+	private String sNumber;
 	
-	@Column(name = "re_service", nullable = false)
-	private String re_service;
-	
-	@Column(name = "s_number", nullable = false)
-	private String s_number;
-	
-	@Column(name = "s_addr", nullable = false)
-	private String s_addr;
+	@Column(name = "sAddr", nullable = false)
+	private String sAddr;
 	
 	//private String date_time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-	@Column(name = "re_time", nullable = false)
-	private String re_time;
+	@Column(name = "reTime", nullable = false)
+	private String reTime;
 	
-	@Column(name = "re_condition", nullable = false)
-	private String re_condition;
+	@Column(name = "reCondition", nullable = false)
+	private String reCondition;
 	
 }
