@@ -1,11 +1,5 @@
 package start.main.db;
 
-<<<<<<< HEAD
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-=======
->>>>>>> refs/heads/PMS
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -25,27 +19,20 @@ import lombok.Setter;
 @Setter
 @Entity(name = "reserve")
 public class ReserveVO {
-<<<<<<< HEAD
 
-	@Column(name = "u_id")
-	private String u_id;
-=======
-	
 	@Id
 	@Column
 	private Long sIndex;
-	
+
 	//1:1? 1:다? 다:1? 다:다?
 	@ManyToOne
 	@JoinColumn(name = "uId")
 	private UserVO uId;
-	//private UesrVO u_id;
->>>>>>> refs/heads/PMS
-	
+
+
 	@Column(name = "sName", nullable = false)
 	private String sName;
-	//private ShopVO s_name;
-	
+
 	@Column(name = "reService", nullable = false)
 	private String reService;
 	

@@ -19,8 +19,14 @@ public class MainController {
 		
 	}
 	
-	@GetMapping("/recoverUserInfo")
-	public String move_recoverUserInfo() {
-		return "recoverUserInfo";
+	@GetMapping("/recover_userinfo")
+	public String move_recover_userinfo() {
+		return "recover_userinfo";
+
+	}
+	@GetMapping("/sign")
+	public String sign() {
+		return "sign";
+
 	}
 }

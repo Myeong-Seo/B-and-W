@@ -29,18 +29,10 @@ public class ShopVO {
 	@Column(name = "sNumber", nullable = false)
 	private String sNumber;
 
-<<<<<<< HEAD
-	@Column(name = "s_addr", nullable = false)
-	private String s_addr;
-	
-	@Column(name = "s_thum")
-	private String s_thum;
-=======
 	@Column(name = "sAddr", nullable = false)
 	private String sAddr;
-	
+
 	@Column(name = "sThum")
 	private String sThum;
->>>>>>> refs/heads/PMS
-	
+
 }
