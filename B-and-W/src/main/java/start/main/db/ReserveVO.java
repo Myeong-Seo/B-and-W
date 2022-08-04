@@ -1,11 +1,16 @@
 package start.main.db;
 
+<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+=======
+>>>>>>> refs/heads/PMS
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,27 +25,41 @@ import lombok.Setter;
 @Setter
 @Entity(name = "reserve")
 public class ReserveVO {
+<<<<<<< HEAD
 
 	@Column(name = "u_id")
 	private String u_id;
+=======
 	
-	@Column(name = "s_name", nullable = false)
-	private String s_name;
+	@Id
+	@Column
+	private Long sIndex;
 	
-	@Column(name = "re_service", nullable = false)
-	private String re_service;
+	//1:1? 1:다? 다:1? 다:다?
+	@ManyToOne
+	@JoinColumn(name = "uId")
+	private UserVO uId;
+	//private UesrVO u_id;
+>>>>>>> refs/heads/PMS
 	
-	@Column(name = "s_number", nullable = false)
-	private String s_number;
+	@Column(name = "sName", nullable = false)
+	private String sName;
+	//private ShopVO s_name;
 	
-	@Column(name = "s_addr", nullable = false)
-	private String s_addr;
+	@Column(name = "reService", nullable = false)
+	private String reService;
+	
+	@Column(name = "sNumber", nullable = false)
+	private String sNumber;
+	
+	@Column(name = "sAddr", nullable = false)
+	private String sAddr;
 	
 	//private String date_time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-	@Column(name = "re_time", nullable = false)
-	private String re_time;
+	@Column(name = "reTime", nullable = false)
+	private String reTime;
 	
-	@Column(name = "re_condition", nullable = false)
-	private String re_condition;
+	@Column(name = "reCondition", nullable = false)
+	private String reCondition;
 	
 }
