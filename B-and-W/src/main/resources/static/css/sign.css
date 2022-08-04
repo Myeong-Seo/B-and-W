@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.text{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    width: 300px;
+}
+
+.name{
+    font-size: 100%;
+    position: relative;
+}
+.sign_up{
+    width:400px;
+    height:60px;
+    font-size:20px;
+    font-weight:bold;
+    border: 1;
+    border-radius: 15px;
+    background-color:#FFEA00;
+    cursor:pointer;
+}
+.sign_up:active{
+    background: green;
+}
+
+.header{
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+}
+
+.body{
+    text-align: center;
+}

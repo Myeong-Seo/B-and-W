@@ -1,5 +1,8 @@
 package start.main.db;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,7 +22,7 @@ import lombok.Setter;
 @Setter
 @Entity(name = "reserve")
 public class ReserveVO {
-	
+
 	@Id
 	@Column
 	private Long sIndex;
