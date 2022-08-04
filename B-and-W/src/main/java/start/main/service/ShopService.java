@@ -8,16 +8,16 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import start.main.db.ShopRepository;
 import start.main.db.ShopVO;
+import start.main.repository.SDJShopRepository;
 
 @Transactional
 public class ShopService {
 
 	@Autowired
-	private final ShopRepository shopRepository;
+	private final SDJShopRepository shopRepository;
 	
-	public ShopService(ShopRepository shopRepository) {
+	public ShopService(SDJShopRepository shopRepository) {
 		this.shopRepository = shopRepository;
 	}
 
