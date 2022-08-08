@@ -29,17 +29,10 @@ public class UserServiceTest {
 		
 		us.join_Member(user1);
 		
-		
-		
 		UserVO findUser = us.findOne(user1.getUname()).get();
 		Assertions.assertThat(user1.getUname()).isEqualTo(findUser.getUname());
 		
 		System.out.println(findUser.getUname());
-		
-	}
-	
-	@Test
-	public void findAll() {
 		
 	}
 	
