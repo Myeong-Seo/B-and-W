@@ -18,7 +18,6 @@ public class MainController {
 		return "login";
 		
 	}
-
 	
 	@GetMapping("/recover_userinfo")
 	public String move_recover_userinfo() {

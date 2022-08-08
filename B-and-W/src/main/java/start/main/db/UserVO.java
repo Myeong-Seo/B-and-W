@@ -18,23 +18,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor		
 @NoArgsConstructor
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class UserVO {
 	
+	//변수명  소문자
 	@Id
-	@Column(name = "uid", nullable = false)
+	@Column(name = "uId", nullable = false)
 	private String uid;
 
-	@Column(name="upwd", nullable = false)
+	@Column(name="uPwd", nullable = false)
 	private String upwd;
-	
-	@Column(name="uname", nullable = false)
+
+	@Column(name="uName", nullable = false)
 	private String uname;
-  
-	@Column(name="uaddr", nullable = false)
+
+	@Column(name="uAddr", nullable = false)
 	private String uaddr;
 	
-	@Column(name="unumber")
+	@Column(name="uNumber")
 	private String unumber;
 	
 	@OneToMany(mappedBy = "uid")

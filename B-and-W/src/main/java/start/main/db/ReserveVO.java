@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,29 +18,28 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-@Entity(name = "reserve")
+@Entity
+@Table(name = "reserve")
 public class ReserveVO {
 
 	@Id
 	@Column
 	private Long sindex;
-	
+
 	//1:1? 1:다? 다:1? 다:다?
 	@ManyToOne
 	@JoinColumn(name = "uid")
 	private UserVO uid;
-	//private UesrVO u_id;
-	
+
 	@Column(name = "sName", nullable = false)
 	private String sname;
-	//private ShopVO s_name;
-	
+
 	@Column(name = "reService", nullable = false)
 	private String reservice;
-	
+
 	@Column(name = "sNumber", nullable = false)
 	private String snumber;
-	
+
 	@Column(name = "sAddr", nullable = false)
 	private String saddr;
 	

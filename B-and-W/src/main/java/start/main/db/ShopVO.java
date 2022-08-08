@@ -3,6 +3,7 @@ package start.main.db;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +16,8 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-@Entity(name = "shop")
+@Entity
+@Table(name = "shop")
 public class ShopVO {
 	
 	@Id
@@ -30,8 +32,7 @@ public class ShopVO {
 
 	@Column(name = "sAddr", nullable = false)
 	private String saddr;
-	
+
 	@Column(name = "sThum")
 	private String sthum;
-	
 }
