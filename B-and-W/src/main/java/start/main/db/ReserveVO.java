@@ -31,23 +31,23 @@ public class ReserveVO {
 	@JoinColumn(name = "uid")
 	private UserVO uid;
 
-	@Column(name = "sName", nullable = false)
+	@Column(name = "sname", nullable = false)
 	private String sname;
 
-	@Column(name = "reService", nullable = false)
+	@Column(name = "reservice", nullable = false)
 	private String reservice;
 
-	@Column(name = "sNumber", nullable = false)
+	@Column(name = "snumber", nullable = false)
 	private String snumber;
 
-	@Column(name = "sAddr", nullable = false)
+	@Column(name = "snddr", nullable = false)
 	private String saddr;
 	
 	//private String date_time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-	@Column(name = "reTime", nullable = false)
+	@Column(name = "retime", nullable = false)
 	private String retime;
 	
-	@Column(name = "reCondition", nullable = false)
+	@Column(name = "recondition", nullable = false)
 	private String recondition;
 	
 }
