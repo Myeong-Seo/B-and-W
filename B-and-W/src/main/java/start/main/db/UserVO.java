@@ -4,6 +4,7 @@ package start.main.db;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -18,25 +19,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor		
 @NoArgsConstructor
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class UserVO {
-
 	
 	@Id
 	@Column(name = "uId", nullable = false)
-	private String uId;
+	private String uid;
 	
 	@Column(name="uPwd", nullable = false)
-	private String uPwd;
+	private String upwd;
 	
 	@Column(name="uName", nullable = false)
-	private String uName;
+	private String uname;
 	
 	@Column(name="uAddr", nullable = false)
-	private String uAddr;
+	private String uaddr;
 	
 	@Column(name="uNumber")
-	private String uNumber;
+	private String unumber;
 	
 	@OneToMany(mappedBy = "uId")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
