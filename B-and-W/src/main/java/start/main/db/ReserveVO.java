@@ -24,11 +24,11 @@ public class ReserveVO {
 
 	@Id
 	@Column
-	private Long sIndex;
+	private Long sindex;
 
 	//1:1? 1:다? 다:1? 다:다?
 	@ManyToOne
-	@JoinColumn(name = "uId")
+	@JoinColumn(name = "uid")
 	private UserVO uid;
 
 

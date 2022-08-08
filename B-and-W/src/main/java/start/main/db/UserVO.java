@@ -39,7 +39,7 @@ public class UserVO {
 	@Column(name="uNumber")
 	private String unumber;
 	
-	@OneToMany(mappedBy = "uId")
+	@OneToMany(mappedBy = "uid")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 
 }
