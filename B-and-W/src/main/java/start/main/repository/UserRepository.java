@@ -7,8 +7,8 @@ import start.main.db.UserVO;
 
 public interface UserRepository {
 	UserVO save(UserVO member);
-	Optional<UserVO> findByuId(String uId);
-	Optional<UserVO> findByuName(String uName);
+	Optional<UserVO> findByuid(String uid);
+	Optional<UserVO> findByuname(String uname);
 	List<UserVO> findAll();
 	
 }
