@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <link th:href="@{/css/recover_userinfo.css}" rel="stylesheet"/>
 <link th:href="@{/css/login.css}" rel="stylesheet"/>
+<script type="text/javascript" th:src="@{/js/recover_userinfo.js}"></script>
 <title>아이디 / 비밀번호 찾기</title>
 </head>
 <body>
@@ -17,9 +18,10 @@
 				</td>
 			</tr>
 		</thead>
+		<form name="revocer_form" action="/recover_user" method="POST">
 		<tbody>
 			<tr>
-				<td>e-mail &nbsp;&nbsp;&nbsp;<input type="text" class="user_id" name="user_id"></td>
+				<td>e-mail &nbsp;&nbsp;&nbsp;<input type="text" class="user_mail" name="user_mail"></td>
 			</tr>
 			<tr>
 				<td>
@@ -32,6 +34,7 @@
 				<td><input type="submit" class="recover_submit" value="아이디/비밀번호 찾기"></td>
 			</tr>
 		</tfoot>
+		</form>
 	</table>
 	<div th:replace="/navi/footer"></div>
 </body>
