@@ -3,7 +3,6 @@ package start.main.db;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,19 +19,19 @@ import lombok.Setter;
 public class ShopVO {
 	
 	@Id
-	@Column(name = "s_index", nullable = false)
-	private long s_index;
+	@Column(name = "sIndex", nullable = false)
+	private long sindex;
 	
-	@Column(name = "s_name", nullable = false)
-	private String s_name;
+	@Column(name = "sName", nullable = false)
+	private String sname;
 
-	@Column(name = "s_number", nullable = false)
-	private String s_number;
+	@Column(name = "sNumber", nullable = false)
+	private String snumber;
 
-	@Column(name = "s_addr", nullable = false)
-	private String s_addr;
+	@Column(name = "sAddr", nullable = false)
+	private String saddr;
 	
-	@Column(name = "s_thum")
-	private String s_thum;
+	@Column(name = "sThum")
+	private String sthum;
 	
 }

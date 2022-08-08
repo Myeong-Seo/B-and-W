@@ -20,26 +20,24 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="user")
 public class UserVO {
-
 	
 	@Id
-	@Column(name = "u_id", nullable = false)
-	private String id;
+	@Column(name = "uid", nullable = false)
+	private String uid;
 
-	@Column(name="u_pwd", nullable = false)
-	private String u_pwd;
+	@Column(name="upwd", nullable = false)
+	private String upwd;
 	
-	@Column(name="u_name", nullable = false)
-
-	private String name;
+	@Column(name="uname", nullable = false)
+	private String uname;
   
-	@Column(name="u_addr", nullable = false)
-	private String u_addr;
+	@Column(name="uaddr", nullable = false)
+	private String uaddr;
 	
-	@Column(name="u_number")
-	private String u_number;
+	@Column(name="unumber")
+	private String unumber;
 	
-	@OneToMany(mappedBy = "u_id")
+	@OneToMany(mappedBy = "uid")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 
 }
