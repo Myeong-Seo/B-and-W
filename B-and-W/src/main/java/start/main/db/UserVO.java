@@ -4,7 +4,6 @@ package start.main.db;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,25 +20,25 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "user")
 public class UserVO {
-	
+	// Upload
 	//변수명  소문자
 	@Id
 	@Column(name = "uId", nullable = false)
 	private String uid;
-	
+
 	@Column(name="uPwd", nullable = false)
 	private String upwd;
-	
+
 	@Column(name="uName", nullable = false)
 	private String uname;
-	
+
 	@Column(name="uAddr", nullable = false)
 	private String uaddr;
 	
 	@Column(name="uNumber")
 	private String unumber;
 	
-	@OneToMany(mappedBy = "uId")
+	@OneToMany(mappedBy = "uid")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 
 }

@@ -11,7 +11,7 @@ import start.main.db.ShopVO;
 public interface ShopRepository {
 	ShopVO save(ShopVO shop);
 	Optional<ShopVO> findById(Long sIndex);
-	Optional<ShopVO> findBysName(String sName);
+	Optional<ShopVO> findBysname(String sName);
 	List<ShopVO> findAll();
 
 }

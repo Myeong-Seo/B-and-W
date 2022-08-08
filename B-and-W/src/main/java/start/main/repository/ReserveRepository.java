@@ -9,8 +9,8 @@ import start.main.db.UserVO;
 
 public interface ReserveRepository {
 	ReserveVO save(ReserveVO reserve);
-	Optional<ReserveVO> findByuId(Long sIndex);
-	Optional<ReserveVO> findBysName(String sName);
+	Optional<ReserveVO> findByuid(Long sIndex);
+	Optional<ReserveVO> findBysname(String sName);
 	List<ReserveVO> findAll();
 
 }
