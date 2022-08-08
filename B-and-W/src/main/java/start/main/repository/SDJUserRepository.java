@@ -8,10 +8,11 @@ import start.main.db.UserVO;
 
 public interface SDJUserRepository extends JpaRepository<UserVO, String>, UserRepository{
 	
-	@Override
-	Optional<UserVO> findById(String uId);
+	//@Override
+	Optional<UserVO> findByuId(String uId);
 	
-	@Override
-	Optional<UserVO> findByName(String uName);
+	//@Override
+	Optional<UserVO> findByuName(String uName);
+	
 	
 }

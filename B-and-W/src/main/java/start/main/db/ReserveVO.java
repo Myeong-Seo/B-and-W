@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +18,8 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-@Entity(name = "reserve")
+@Entity
+@Table(name = "reserve")
 public class ReserveVO {
 
 	@Id
@@ -27,26 +29,26 @@ public class ReserveVO {
 	//1:1? 1:다? 다:1? 다:다?
 	@ManyToOne
 	@JoinColumn(name = "uId")
-	private UserVO uId;
+	private UserVO uid;
 
 
 	@Column(name = "sName", nullable = false)
-	private String sName;
+	private String sname;
 
 	@Column(name = "reService", nullable = false)
-	private String reService;
+	private String reservice;
 	
 	@Column(name = "sNumber", nullable = false)
-	private String sNumber;
+	private String snumber;
 	
 	@Column(name = "sAddr", nullable = false)
-	private String sAddr;
+	private String saddr;
 	
 	//private String date_time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 	@Column(name = "reTime", nullable = false)
-	private String reTime;
+	private String retime;
 	
 	@Column(name = "reCondition", nullable = false)
-	private String reCondition;
+	private String recondition;
 	
 }
