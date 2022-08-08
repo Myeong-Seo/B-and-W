@@ -35,5 +35,4 @@ public class ShopVO {
 
 	@Column(name = "sThum")
 	private String sthum;
-
 }

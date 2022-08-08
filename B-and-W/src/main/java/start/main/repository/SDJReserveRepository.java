@@ -10,9 +10,9 @@ import start.main.db.UserVO;
 public interface SDJReserveRepository extends JpaRepository<ReserveVO, UserVO>, ReserveRepository {
 	
 	@Override
-	Optional<ReserveVO> findByuId(Long sIndex);
+	Optional<ReserveVO> findByuid(Long sIndex);
 	
 	@Override
-	Optional<ReserveVO> findBysName(String sName);
+	Optional<ReserveVO> findBysname(String sName);
 	
 }
