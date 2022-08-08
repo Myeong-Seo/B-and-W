@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "user")
 public class UserVO {
-	
+	// Upload
 	//변수명  소문자
 	@Id
 	@Column(name = "uId", nullable = false)
