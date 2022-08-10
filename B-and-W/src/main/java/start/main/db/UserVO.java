@@ -20,24 +20,25 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "user")
 public class UserVO {
-	
+	// Upload
+	//변수명  소문자
 	@Id
-	@Column(name = "uId", nullable = false)
+	@Column(name = "uid", nullable = false)
 	private String uid;
-	
-	@Column(name="uPwd", nullable = false)
+
+	@Column(name="upwd", nullable = false)
 	private String upwd;
-	
-	@Column(name="uName", nullable = false)
+
+	@Column(name="uname", nullable = false)
 	private String uname;
-	
-	@Column(name="uAddr", nullable = false)
+
+	@Column(name="uaddr", nullable = false)
 	private String uaddr;
 	
-	@Column(name="uNumber")
+	@Column(name="unumber")
 	private String unumber;
 	
-	@OneToMany(mappedBy = "uId")
+	@OneToMany(mappedBy = "uid")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 
 }

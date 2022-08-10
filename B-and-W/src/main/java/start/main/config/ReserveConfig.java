@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 import start.main.repository.SDJReserveRepository;
 import start.main.service.ReserveService;
-import start.main.service.ShopService;
 
 @Configuration
 public class ReserveConfig {

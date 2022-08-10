@@ -11,8 +11,8 @@ public interface SDJReserveRepository extends JpaRepository<ReserveVO, UserVO>, 
 	
 	@Override
 	Optional<ReserveVO> findByuid(Long sindex);
-	
+
 	@Override
 	Optional<ReserveVO> findBysname(String sname);
-	
+
 }

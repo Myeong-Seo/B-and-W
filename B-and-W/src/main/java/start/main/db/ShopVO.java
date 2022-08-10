@@ -21,19 +21,18 @@ import lombok.Setter;
 public class ShopVO {
 	
 	@Id
-	@Column(name = "sIndex", nullable = false)
+	@Column(name = "sindex", nullable = false)
 	private long sindex;
 	
-	@Column(name = "sName", nullable = false)
+	@Column(name = "sname", nullable = false)
 	private String sname;
 
-	@Column(name = "sNumber", nullable = false)
+	@Column(name = "snumber", nullable = false)
 	private String snumber;
 
-	@Column(name = "sAddr", nullable = false)
+	@Column(name = "saddr", nullable = false)
 	private String saddr;
 
-	@Column(name = "sThum")
+	@Column(name = "sthum")
 	private String sthum;
-
 }

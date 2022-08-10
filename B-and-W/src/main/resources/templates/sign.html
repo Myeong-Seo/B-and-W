@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link th:href="@{/css/sign.css}" rel="stylesheet">
-    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
     <title>회원가입</title>
 </head>
 <body>
 <div class = "header" th:replace="/navi/header"></div>
 <br><br>
 <div class="body">
+
     <b class="name">아이디</b><br>
     <input class="text" type="text" name="UserID" placeholder="아이디를 입력해주세요"><br><br>
 
@@ -25,7 +26,7 @@
     <b class="name">비밀번호 확인</b><br>
     <input class="text" type="password" name="PW" placeholder="비밀번호를 입력해주세요"><br><br><br>
 
-    <button class="sign_up" type="button">Sign up</button>
+    <button class="sign_up" type="submit">Sign up</button>
 </div>
     <div class = "footer" th:replace="/navi/footer"></div>
 </body>

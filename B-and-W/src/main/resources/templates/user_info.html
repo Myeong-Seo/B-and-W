@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/sign.css}" rel="stylesheet">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+    <title>회원가입</title>
+</head>
+<body>
+<div class = "header" th:replace="/navi/header"></div>
+<br><br>
+<div class="body">
+
+    <b class="name">아이디</b><br>
+    <input class="text" type="text" name="UserID"><br><br>
+
+    <b class="name">비밀번호</b><br>
+    <input class="text" type="password" name="PW"><br><br>
+
+    <b class="name">비밀번호 확인</b><br>
+    <input class="text" type="password" name="PW"><br><br>
+
+    <b class="name">이메일</b><br>
+    <input class="text" type="email" name="email"><br><br>
+
+    <b class="name">전화번호</b><br>
+    <input class="text" type="tel" name="phone"><br><br><br>
+
+    <button class="sign_up" type="submit">회원정보 수정</button>
+    <button class="sign_up" onclick="location.href='/main'">취소</button>
+</div>
+    <div class = "footer" th:replace="/navi/footer"></div>
+</body>
+</html>
+
