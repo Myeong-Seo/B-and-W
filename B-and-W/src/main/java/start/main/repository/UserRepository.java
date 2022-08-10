@@ -9,6 +9,7 @@ public interface UserRepository {
 	UserVO save(UserVO member);
 	Optional<UserVO> findByuid(String uId);
 	Optional<UserVO> findByuname(String uName);
+	Optional<UserVO> findByumail(String uMail);
 	List<UserVO> findAll();
 	
 }

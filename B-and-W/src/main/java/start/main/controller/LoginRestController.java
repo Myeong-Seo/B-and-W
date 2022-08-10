@@ -22,8 +22,10 @@ public class LoginRestController {
 	}
 	
 	@PostMapping("/recover_user")
-	public void recovery(@RequestParam("user_mail") String mail) {
+	public String recovery(@RequestParam("user_mail") String mail) {
+		int result = us.revocerUserInfo(mail);
 		
+		return "redirect:/";
 	}
 
 	@GetMapping("/test")
