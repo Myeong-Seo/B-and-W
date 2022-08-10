@@ -40,7 +40,7 @@ public class ReserveVO {
 	@Column(name = "snumber", nullable = false)
 	private String snumber;
 
-	@Column(name = "snddr", nullable = false)
+	@Column(name = "saddr", nullable = false)
 	private String saddr;
 	
 	//private String date_time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));

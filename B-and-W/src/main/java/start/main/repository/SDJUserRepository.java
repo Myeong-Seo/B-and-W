@@ -14,4 +14,7 @@ public interface SDJUserRepository extends JpaRepository<UserVO, String>, UserRe
 	@Override
 	Optional<UserVO> findByuname(String uname);
 	
+	@Override
+	UserVO save(UserVO member);
+
 }

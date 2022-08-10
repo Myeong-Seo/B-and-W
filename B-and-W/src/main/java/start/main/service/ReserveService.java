@@ -15,7 +15,7 @@ public class ReserveService {
 
 	@Autowired
 	SDJReserveRepository reserveRepository;
-	
+
 	public ReserveService(SDJReserveRepository reserveRepository) {
 		this.reserveRepository = reserveRepository;
 	}
@@ -25,11 +25,11 @@ public class ReserveService {
 		reserveRepository.findAll().forEach(e -> shop.add(e));
 		return shop;
 	}
-	
+
 	public ReserveVO InsertShop(ReserveVO reserve) {
 		return reserveRepository.save(reserve);
 	}
-	
+
 //	public Optional<ReserveVO> findById(String name){
 //		return reserveRepo.getById(name); 
 //	}
