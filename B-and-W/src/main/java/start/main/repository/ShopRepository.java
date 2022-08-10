@@ -7,8 +7,8 @@ import start.main.db.ShopVO;
 
 public interface ShopRepository {
 	ShopVO save(ShopVO shop);
-	Optional<ShopVO> findById(Long sIndex);
-	Optional<ShopVO> findBysname(String sName);
+	Optional<ShopVO> findBysindex(Long sindex);
+	Optional<ShopVO> findBysname(String sname);
 	List<ShopVO> findAll();
 
 }

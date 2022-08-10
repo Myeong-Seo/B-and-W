@@ -6,4 +6,7 @@ import start.main.db.ShopVO;
 
 public interface SDJShopRepository extends JpaRepository<ShopVO, Long>, ShopRepository {
 
+	
+	
+	
 }
