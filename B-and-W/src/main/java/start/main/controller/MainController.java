@@ -29,4 +29,9 @@ public class MainController {
 		return "sign";
 
 	}
+	@GetMapping("/user_info")
+	public String user_info() {
+		return "user_info";
+
+	}
 }
