@@ -1,9 +1,10 @@
 package start.main.repository;
 
+import start.main.db.UserVO;
+
 import java.util.List;
 import java.util.Optional;
 
-import start.main.db.UserVO;
 
 public interface UserRepository {
 	UserVO save(UserVO member);
@@ -11,5 +12,4 @@ public interface UserRepository {
 	Optional<UserVO> findByuname(String uname);
 	Optional<UserVO> findByumail(String umail);
 	List<UserVO> findAll();
-	
 }
