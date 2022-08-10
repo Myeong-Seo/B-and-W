@@ -16,4 +16,8 @@ public interface SDJUserRepository extends JpaRepository<UserVO, String>, UserRe
 	
 	@Override
 	Optional<UserVO> findByumail(String umail);
+  
+  @Override
+	UserVO save(UserVO member);
+
 }

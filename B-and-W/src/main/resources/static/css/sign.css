@@ -22,7 +22,7 @@
     cursor:pointer;
 }
 .sign_up:active{
-    background: green;
+    background: rgb(255, 255, 255);
 }
 
 .header{
@@ -36,3 +36,4 @@
 .body{
     text-align: center;
 }
+
