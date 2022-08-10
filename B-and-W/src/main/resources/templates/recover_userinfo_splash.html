@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/recover_userinfo.css}" rel="stylesheet"/>
+<link th:href="@{/css/login.css}" rel="stylesheet"/>
+<script type="text/javascript" th:src="@{/js/recover_userinfo.js}"></script>
+<title>아이디 / 비밀번호 찾기</title>
+</head>
+<body>
+	<div th:replace="/navi/header"></div>
+	<table>
+		<tbody>
+			<tr>
+				<td><p>가입할 때 이용하신 이메일로<br>
+						개인 정보를 보내드렸습니다.</p>
+					<p>이 페이지는 자동으로 로그인 화면으로 전환됩니다.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div th:replace="/navi/footer"></div>
+</body>
+</html>

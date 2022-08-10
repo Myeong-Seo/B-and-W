@@ -79,11 +79,11 @@ public class UserService {
 			} catch (MessagingException e) {
 				
 				e.printStackTrace();
+				return -1;
 			}
 		}
 		else {
 			return 0;
 		}
-		return 0;
 	}
 }
