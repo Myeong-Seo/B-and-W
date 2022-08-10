@@ -17,7 +17,9 @@ public class UserServiceTest {
 		user1.setUid("test1");
 		user1.setUpwd("123");
 		user1.setUname("아무개");
-		user1.setUaddr("오산");
+		user1.setUaddr1("오산");
+		user1.setUaddr2("부산동");
+		user1.setUmail("1235@naver.com");
 		
 		System.out.println(user1.getUid());
 		
