@@ -1,7 +1,12 @@
 package start.main.service;
 
-import org.apache.catalina.User;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
+
+import start.main.db.UserVO;
 import start.main.repository.UserRepository;
 
 @SpringBootTest

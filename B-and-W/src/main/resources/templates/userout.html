@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/sign.css}" rel="stylesheet">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+    <title>B & W 회원탈퇴</title>
+</head>
+<body>
+<div class = "header" th:replace="/navi/header"></div>
+<br><br>
+<div class="body">
+
+    <b class="name">아이디</b><br>
+    <input class="text" type="text" name="UserID"><br><br>
+
+    <b class="name">비밀번호</b><br>
+    <input class="text" type="password" name="PW"><br><br><br>
+    
+    <b><label><input type="checkbox" name="color" value="blue"> </label></b>
+
+    <button class="sign_up" type="submit">회원탈퇴 진행</button>
+    <button class="sign_up" onclick="history.go(-1)">취소</button>
+</div>
+    <div class = "footer" th:replace="/navi/footer"></div>
+</body>
+</html>
+

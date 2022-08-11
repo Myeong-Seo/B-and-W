@@ -23,7 +23,7 @@ public class LoginRestController {
 	
 	@PostMapping("/recover_user")
 	public String recovery(@RequestParam("user_mail") String mail) {
-		int result = us.revocerUserInfo(mail);
+		int result = us.recoverUserInfo(mail);
 		
 		return "redirect:/";
 	}

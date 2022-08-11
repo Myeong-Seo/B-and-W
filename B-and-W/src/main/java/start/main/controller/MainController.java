@@ -34,4 +34,9 @@ public class MainController {
 		return "user_info";
 
 	}
+	@GetMapping("/userout")
+	public String userout() {
+		return "userout";
+
+	}
 }

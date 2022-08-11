@@ -1,11 +1,11 @@
 package start.main.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.transaction.Transactional;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -47,7 +47,7 @@ public class UserService {
 	@Value("${spring.mail.username}")
 	String from;
 	
-	public int revocerUserInfo(String mail) {
+	public int recoverUserInfo(String mail) {
 		
 		if(findOneByMail(mail).isPresent()) {
 			UserVO user = findOneByMail(mail).get();
