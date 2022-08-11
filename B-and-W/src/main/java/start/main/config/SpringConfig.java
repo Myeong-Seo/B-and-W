@@ -1,10 +1,11 @@
-package start.main.service;
+package start.main.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import start.main.repository.UserRepository;
+import start.main.service.UserService;
 
 @Configuration
 public class SpringConfig {

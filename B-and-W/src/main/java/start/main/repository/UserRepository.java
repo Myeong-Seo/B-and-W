@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public interface UserRepository {
 	UserVO save(UserVO member);
-	Optional<UserVO> findByuid(String uId);
-	Optional<UserVO> findByuname(String uName);
+	Optional<UserVO> findByuid(String uid);
+	Optional<UserVO> findByuname(String uname);
+	Optional<UserVO> findByumail(String umail);
 	List<UserVO> findAll();
-	
 }

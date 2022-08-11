@@ -10,5 +10,6 @@ import java.util.Optional;
 public interface SDJShopRepository extends JpaRepository<ShopVO, Long>, ShopRepository {
 
     @Override
-    Optional<ShopVO> findById(Long sIndex);
+    Optional<ShopVO> findBysindex(Long sindex);
+    
 }
