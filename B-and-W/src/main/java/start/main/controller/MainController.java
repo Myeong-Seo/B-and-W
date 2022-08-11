@@ -22,8 +22,13 @@ public class MainController {
 	@GetMapping("/recover_userinfo")
 	public String move_recover_userinfo() {
 		return "recover_userinfo";
-
 	}
+	
+	@GetMapping("/recover_userinfo_splash")
+	public String move_recover_userinfo_splash() {
+		return "recover_userinfo_splash";
+	}
+	
 	@GetMapping("/sign")
 	public String sign() {
 		return "sign";
