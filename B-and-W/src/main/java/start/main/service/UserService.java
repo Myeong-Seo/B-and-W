@@ -35,6 +35,10 @@ public class UserService {
 		return userRepository.findAll();
 	}
 	
+	public Optional<UserVO> findByuid(String id){
+		return userRepository.findByuid(id);
+	}
+	
 	public Optional<UserVO> findOne(String name) {
 		return userRepository.findByuname(name);
 	}
@@ -43,11 +47,23 @@ public class UserService {
 		return userRepository.findByumail(mail);
 	}
 	
+	public UserVO userinfo(String id) {
+		
+		if(findByuid(id).isPresent()) {
+			UserVO user = findByuid(id).get();
+			return user;
+		}
+		else {
+			return null;
+		}
+	}
+	
+	
 	// 메일용
 	@Value("${spring.mail.username}")
 	String from;
 	
-	public int revocerUserInfo(String mail) {
+	public int recoverUserInfo(String mail) {
 		
 		if(findOneByMail(mail).isPresent()) {
 			UserVO user = findOneByMail(mail).get();

@@ -1,5 +1,7 @@
 package start.main.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,6 +39,11 @@ public class MainController {
 	@GetMapping("/user_info")
 	public String user_info() {
 		return "user_info";
+
+	}
+	@GetMapping("/user_out")
+	public String user_out() {
+		return "user_out";
 
 	}
 }

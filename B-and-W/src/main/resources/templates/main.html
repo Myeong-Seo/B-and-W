@@ -15,8 +15,9 @@
 	
 	<button onclick="location.href='/login'">로그인</button>
 	<button onclick="location.href='/sign'">회원가입</button>
-
 	<button onclick="location.href='/user_info'">회원정보수정</button>
+	<button onclick="location.href='/logout'">로그아웃</button>
+	<h1 th:text="${session['id']}"></h1>
 	<div th:replace="/navi/footer"></div>
 </body>
 </html>
