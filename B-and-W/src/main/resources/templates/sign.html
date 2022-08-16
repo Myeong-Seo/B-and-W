@@ -4,31 +4,54 @@
     <meta charset="UTF-8">
     <link th:href="@{/css/sign.css}" rel="stylesheet">
     <link th:href="@{/css/login.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/sign.js}"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>회원가입</title>
 </head>
 <body>
 <div class="header" th:replace="/navi/header"></div>
 <br><br>
 <div class="body">
+    <form name="join_form" action="/signup" method="post">
+        <b class="name">이름</b><br>
+        <input class="text" type="name" id="name" name="name" placeholder="이름을 입력해주세요"><br><br>
 
-    <b class="name">아이디</b><br>
-    <input class="text" type="text" name="id" placeholder="아이디를 입력해주세요"><br><br>
+        <b class="name">아이디</b><br>
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="text"
+                                                                                                 type="text" id="id"
+                                                                                                 name="id"
+                                                                                                 placeholder="아이디를 4자 이상 입력해주세요">
+            <button type="button" class="idCheck" id="idCheck" onClick="idCheck()">중복검사</button>
+            <span id="result"></span>
+            <br><br>
+        </div>
 
-    <b class="name">이메일</b><br>
-    <input class="text" type="email" name="email" placeholder="이메일을 입력해주세요"><br><br>
+        <b class="name">본인 확인 이메일</b><br>
+        <input class="text" type="email" id="email" name="email" placeholder="이메일을 입력해주세요"><br><br>
 
-    <b class="name">전화번호</b><br>
-    <input class="text" type="tel" name="phone" placeholder="전화번호를 입력해주세요"><br><br>
+        <b class="name">전화번호</b><br>
+        <input class="text" type="tel" id="phone" name="phone" placeholder="전화번호를 입력해주세요"><br><br>
 
-    <b class="name">비밀번호</b><br>
-    <input class="text" type="password" name="password" placeholder="비밀번호를 입력해주세요"><br><br>
+        <b class="name">주소</b><br>
+        <input class="text" type="text" id="address" onClick="adr();this.onclick=null;" name="address"
+               placeholder="주소를 입력해주세요" readonly><br><br>
 
-    <b class="name">비밀번호 확인</b><br>
-    <input class="text" type="password" name="password" placeholder="비밀번호를 입력해주세요"><br><br><br>
+        <b class="name">상세주소</b><br>
+        <input class="text" type="text" name="address_detail" id="address_detail" placeholder="상세주소를 입력해주세요"><br><br>
 
-    <button class="sign_up" type="submit">Sign up</button>
+        <b class="name">비밀번호</b><br>
+        <input class="text" type="password" id="password" name="password" placeholder="영문자+숫자+특수문자 조합"><br><br>
+
+        <b class="name">비밀번호 확인</b><br>
+        <input class="text" type="password" id="passwordCheck" placeholder="비밀번호를 다시 입력해주세요"><br><br><br>
+
+        <button class="sign_up" id="sign_up" type="button">
+            Sign Up
+        </button>
+
+    </form>
 </div>
 <div class="footer" th:replace="/navi/footer"></div>
 </body>
 </html>
-

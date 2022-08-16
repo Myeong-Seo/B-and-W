@@ -34,16 +34,16 @@ public class UserVO {
 
 	@Column(name="uaddr1", nullable = false)
 	private String uaddr1;
-	
+
 	@Column(name="uaddr2", nullable = false)
 	private String uaddr2;
-	
+
 	@Column(name="umail", nullable = false)
 	private String umail;
-	
+
 	@Column(name="unumber")
 	private String unumber;
-	
+
 	@OneToMany(mappedBy = "uid")
 	private List<ReserveVO> ReserveVO = new ArrayList<ReserveVO>();
 

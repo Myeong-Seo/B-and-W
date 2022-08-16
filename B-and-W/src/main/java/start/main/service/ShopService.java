@@ -35,9 +35,10 @@ public class ShopService {
 	//	return 
 	//}
 	
-	public Optional<ShopVO> findById(Long sindex){
-		return shopRepository.findById(sindex); 
+	public Optional<ShopVO> findById(Long sIndex){
+		return shopRepository.findById(sIndex);
 	}
+	
 	
 	
 	
