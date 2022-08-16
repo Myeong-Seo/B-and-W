@@ -32,8 +32,14 @@ public class UserVO {
 	@Column(name="uname", nullable = false)
 	private String uname;
 
-	@Column(name="uaddr", nullable = false)
-	private String uaddr;
+	@Column(name="uaddr1", nullable = false)
+	private String uaddr1;
+	
+	@Column(name="uaddr2", nullable = false)
+	private String uaddr2;
+	
+	@Column(name="umail", nullable = false)
+	private String umail;
 	
 	@Column(name="unumber")
 	private String unumber;

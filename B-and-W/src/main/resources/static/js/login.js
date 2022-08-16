@@ -3,6 +3,9 @@ window.onload = function() {
 		const id = document.getElementById("id").value;
 		const password = document.getElementById("password").value;
 
+		console.log(id);
+
+
 		if (id.length > 0 && id != undefined) {
 			if (password.length > 0 && password != undefined) {
 				/*
