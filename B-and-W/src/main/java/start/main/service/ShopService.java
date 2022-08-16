@@ -13,32 +13,30 @@ import start.main.repository.SDJShopRepository;
 
 @Transactional
 public class ShopService {
-
 	@Autowired
 	private final SDJShopRepository shopRepository;
-	
+
 	public ShopService(SDJShopRepository shopRepository) {
 		this.shopRepository = shopRepository;
 	}
-
 	public ShopVO save(ShopVO shop) {
 		return shopRepository.save(shop);
 	}
-	
+
 	public List<ShopVO> findAll(){
 		List<ShopVO> shop = new ArrayList<>();
 		shopRepository.findAll().forEach(e -> shop.add(e));
 		return shop;
 	}
-	
+
 	//public Optional<ShopVO> findByName(String name){
-	//	return 
+	//	return
 	//}
-	
+
 	public Optional<ShopVO> findById(Long sindex){
-		return shopRepository.findById(sindex); 
+		return shopRepository.findById(sindex);
 	}
-	
-	
-	
+
+
+
 }
