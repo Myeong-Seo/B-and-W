@@ -22,18 +22,20 @@
     cursor:pointer;
 }
 .sign_up:active{
-    background: green;
+    background: rgb(255, 255, 255);
 }
 
 .header{
     width: 100%;
 }
-
 .footer{
     width: 100%;
 }
-
 .body{
     text-align: center;
 }
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
 
+}

@@ -1,20 +1,17 @@
 package start.main.service;
-
 import java.util.List;
 import java.util.Optional;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
-
 import start.main.db.UserVO;
 import start.main.repository.UserRepository;
 
+@Transactional
 public class UserService {
 
 	private final UserRepository userRepository;
@@ -25,7 +22,6 @@ public class UserService {
 	public UserService(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
-
 	public void join_Member(UserVO member) {
 		userRepository.save(member);
 	}
