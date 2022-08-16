@@ -85,7 +85,7 @@ public class LoginRestController {
 		
 	}
 	
-	//로그아웃
+	//로그아웃 변경해야함
 	@GetMapping("/logout_user")
 	public void logout(HttpServletResponse response, HttpSession session) {
 		session.invalidate();
