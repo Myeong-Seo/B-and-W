@@ -47,6 +47,7 @@ public class UserService {
 		return userRepository.findByumail(mail);
 	}
 	
+	//회원정보
 	public UserVO userinfo(String id) {
 		
 		if(findByuid(id).isPresent()) {

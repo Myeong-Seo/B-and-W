@@ -8,7 +8,7 @@
     <title>회원가입</title>
 </head>
 <body>
-<div class = "header" th:replace="/navi/header"></div>
+<div class="header" th:replace="/navi/header"></div>
 <br><br>
 <div class="body">
 	<form name="modify_form" action="/modify_user" method="POST">
@@ -28,11 +28,12 @@
     <input class="text" type="text" name="number" th:value="${session['number']}"><br><br><br>
 
     <button class="sign_up" type="submit" id="modify">회원정보 수정</button>
+
     </form>
-    <button class="sign_up" id="aaa" onclick="location.href='/main'">취소</button>
+    <button class="sign_up" onclick="location.href='/main'">취소</button>
     <button class="sign_up" onclick="location.href='/user_out'">회원탈퇴</button>
 </div>
-    <div class = "footer" th:replace="/navi/footer"></div>
+    <div class="footer" th:replace="/navi/footer"></div>
 </body>
 </html>
 
