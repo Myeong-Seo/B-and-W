@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <link th:href="@{/css/login.css}" rel="stylesheet">
 <link th:href="@{/css/main.css}" rel="stylesheet">
+<script type="text/javascript" th:src="@{/js/ajax.js}"></script>
 <script type="text/javascript" th:src="@{/js/login.js}"></script>
 
 <title>B & W 로그인</title>
@@ -13,11 +14,9 @@
 	<div id="div1">
 	<br><br><br><br><br><br>
 		<h1 th:text="${loginpage}" align="center"></h1>
-		<form name="login_form" action="/login_user" method="POST">
-		아이디 &emsp;&emsp;<input type="text" id="id" name="id" size="20" placeholder=" 아이디를 입력해주세요."><br>
-		비밀번호 &emsp;<input type="password" id="password" name="password" size="20" placeholder=" 비밀번호를 입력해주세요."><br><br>
-		<button type="submit" id="login">로 그 인</button><br><br>
-		</form>
+		아이디 &emsp;&emsp;<input type="text" id="uid" name="uid" size="20" placeholder=" 아이디를 입력해주세요."><br>
+		비밀번호 &emsp;<input type="password" id="upwd" name="upwd" size="20" placeholder=" 비밀번호를 입력해주세요."><br><br>
+		<button id="login">로 그 인</button><br><br>
 		<button id="sub1" onclick="location.href='/sign'">회원가입</button>
 		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<button id="sub2" onclick="location.href='/recover_userinfo'">아이디 / 비밀번호 찾기</button>

@@ -46,4 +46,11 @@ public class MainController {
 		return "user_info";
 
 	}
+	
+	// 회원탈퇴
+	@GetMapping("/user_out")
+	public String user_out() {
+		return "user_out";
+
+	}
 }

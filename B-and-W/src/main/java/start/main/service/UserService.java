@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +51,6 @@ public class UserService {
 	
 	//회원정보
 	public UserVO userinfo(String id) {
-		
 		if(findByuid(id).isPresent()) {
 			UserVO user = findByuid(id).get();
 			return user;
@@ -59,6 +60,50 @@ public class UserService {
 		}
 	}
 	
+	public String login(String uid, String upwd, HttpServletRequest request) {
+		Optional<UserVO> user = userRepository.findByuid(uid);
+		HttpSession session = request.getSession();
+		if(user.isPresent()) {
+			if(user.get().getUid().equals(uid) && user.get().getUpwd().equals(upwd)) {
+				session.setAttribute("user", user);
+				return "s";
+			}
+			else {
+				return "f";
+			}
+		}
+		return "e";
+	}
+	
+	@Transactional
+	public boolean userinfoo(HttpSession session, UserVO user) {
+		String uid = user.getUid();
+		Optional<UserVO> before = userRepository.findByuid(uid);
+		if(before.isPresent()) {
+			if(user.getUpwd() == null) {
+				user.setUpwd(before.get().getUpwd());
+			}
+		}
+		UserVO after = userRepository.save(user);
+		if(after != null) {
+			//협의 후 살리거나 지움
+			session.removeAttribute("user");
+			session.setAttribute("user", after);
+			return true;
+		}
+		return false;
+	}
+	
+	/*
+	//로그아웃
+	public boolean logout(HttpSession session) {
+		if(session.getAttribute("id") != null) {
+			session.invalidate();
+			return true;
+		}
+		return false;
+	}
+	*/
 	
 	// 메일용
 	@Value("${spring.mail.username}")

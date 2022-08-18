@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <link th:href="@{/css/main.css}" rel="stylesheet">
 <link th:href="@{/css/login.css}" rel="stylesheet">
-
+<script type="text/javascript" th:src="@{/js/ajax.js}"></script>
+<script type="text/javascript" th:src="@{/js/login.js}"></script>
 <title>B & W</title>
 </head>
-<!-- <script type="text/javascript" th:src="@{/ajax.js}"></script> -->
+
 <body>
 	<div th:replace="/navi/header"></div>
 	<!-- <button id="logo"><img src="/images/logo.png"/></button> -->
@@ -16,7 +17,7 @@
 	<button onclick="location.href='/login'">로그인</button>
 	<button onclick="location.href='/sign'">회원가입</button>
 	<button onclick="location.href='/user_info'">회원정보수정</button>
-	<button onclick="location.href='/user_out'">로그아웃</button>
+	<button onclick="logout()">로그아웃</button>
 	<h1 th:text="${session['id']}"></h1>
 	<div th:replace="/navi/footer"></div>
 </body>
