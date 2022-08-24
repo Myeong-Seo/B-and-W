@@ -27,3 +27,4 @@ function deleteAjax(url, callBack){
 	xhttp.open("DELETE", url);
 	xhttp.send();
 }
+

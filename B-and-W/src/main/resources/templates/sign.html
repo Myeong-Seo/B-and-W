@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link th:href="@{/css/sign.css}" rel="stylesheet">
     <link th:href="@{/css/login.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/ajax.js}"></script>
     <script type="text/javascript" th:src="@{/js/sign.js}"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>회원가입</title>
@@ -12,45 +13,54 @@
 <div class="header" th:replace="/navi/header"></div>
 <br><br>
 <div class="body">
-    <form name="join_form" action="/signup" method="post">
-        <b class="name">이름</b><br>
-        <input class="text" type="name" id="name" name="name" placeholder="이름을 입력해주세요"><br><br>
+    <b class="name">아이디</b><br>
+    <input class="text" type="text" id="uid" name="uid" placeholder="아이디를 4자 이상 입력해주세요"/>
+    <input type="hidden" id="idChkFlag" value="0"/>
+    <button type="button" class="idCheck" id="idCheck" onClick="idCheck()">중복검사</button>
+    <span id="result"></span>
+    <br><br>
 
-        <b class="name">아이디</b><br>
-        <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="text"
-                                                                                                 type="text" id="id"
-                                                                                                 name="id"
-                                                                                                 placeholder="아이디를 4자 이상 입력해주세요">
-            <button type="button" class="idCheck" id="idCheck" onClick="idCheck()">중복검사</button>
-            <span id="result"></span>
-            <br><br>
-        </div>
+    <b class="name">비밀번호</b><br>
+    <input class="text" type="password" id="upwd" name="upwd"
+           placeholder="4자 이상 입력해주세요"><br><br>
 
-        <b class="name">본인 확인 이메일</b><br>
-        <input class="text" type="email" id="email" name="email" placeholder="이메일을 입력해주세요"><br><br>
+    <b class="name">비밀번호 확인</b><br>
+    <input class="text" type="password" id="upwdCheck" placeholder="비밀번호를 다시 입력해주세요"><br><br>
 
-        <b class="name">전화번호</b><br>
-        <input class="text" type="tel" id="phone" name="phone" placeholder="전화번호를 입력해주세요"><br><br>
 
-        <b class="name">주소</b><br>
-        <input class="text" type="text" id="address" onClick="adr();this.onclick=null;" name="address"
-               placeholder="주소를 입력해주세요" readonly><br><br>
+    <b class="name">이름</b><br>
+    <input class="text" type="name" id="uname" name="uname" placeholder="이름을 입력해주세요"><br><br>
 
-        <b class="name">상세주소</b><br>
-        <input class="text" type="text" name="address_detail" id="address_detail" placeholder="상세주소를 입력해주세요"><br><br>
 
-        <b class="name">비밀번호</b><br>
-        <input class="text" type="password" id="password" name="password" placeholder="영문자+숫자+특수문자 조합"><br><br>
+    <b class="name">주소</b><br>
+    <input class="text" type="text" id="uaddr1" onClick="adr();this.onclick=null;" name="address"
+           placeholder="주소를 입력해주세요" readonly><br><br>
 
-        <b class="name">비밀번호 확인</b><br>
-        <input class="text" type="password" id="passwordCheck" placeholder="비밀번호를 다시 입력해주세요"><br><br><br>
+    <b class="name">상세주소</b><br>
+    <input class="text" type="text" name="uaddr2" id="uaddr2"
+           placeholder="상세주소를 입력해주세요"><br><br>
 
-        <button class="sign_up" id="sign_up" type="button">
-            Sign Up
-        </button>
+    <b class="name">본인 확인 이메일</b><br>
+    <input class="text" id="domain-first"> <span id="middle">@</span><input class="text" id="domain-second"
+                                                                            type="text"/>
+    <select class="text" id="domain-list">
+        <option value="type">직접 입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="google.com">google.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="nate.com">nate.com</option>
+        <option value="kakao.com">kakao.com</option>
+    </select><br><br>
+    <input type="hidden" id="umail" name="umail" value="">
 
-    </form>
+
+    <b class="name">전화번호</b><br>
+    <input class="text" type="tel" id="unumber" name="unumber" placeholder="전화번호를
+           입력해주세요"><br><br>
+
+    <button class="sign_up" onclick="location.href='/main'">취소</button>
+    <button class="sign_up" id="btn">Sign Up</button>
+
 </div>
 <div class="footer" th:replace="/navi/footer"></div>
 </body>

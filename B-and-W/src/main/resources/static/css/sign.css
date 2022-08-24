@@ -1,40 +1,67 @@
 @charset "UTF-8";
 
-.text{
+.text {
     border: 1px solid black;
     border-radius: 5px;
     height: 30px;
     width: 300px;
 }
 
-.name{
+#uid {
+    margin-left: 70px;
+}
+
+.name {
     font-size: 100%;
     position: relative;
 }
-.sign_up{
-    width:400px;
-    height:60px;
-    font-size:20px;
-    font-weight:bold;
+
+.sign_up {
+    width: 400px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
     border: 1;
     border-radius: 15px;
-    background-color:#FFEA00;
-    cursor:pointer;
+    background-color: #FFEA00;
+    cursor: pointer;
 }
-.sign_up:active{
+
+.sign_up:active {
     background: rgb(255, 255, 255);
 }
 
-.header{
+select.box {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    padding: 5px 0 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #d9d6d6;
+    color: #383838;
+    background-color: #ffffff;
+    font-family: 'Montserrat', 'Pretendard', sans-serif;
+}
+
+.info .box#domain-list option {
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.header {
     width: 100%;
 }
-.footer{
+
+.footer {
     width: 100%;
 }
-.body{
+
+.body {
     text-align: center;
 }
-input[type="checkbox"]{
+
+input[type="checkbox"] {
     width: 20px;
     height: 20px;
 

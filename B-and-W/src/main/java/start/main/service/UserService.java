@@ -22,8 +22,9 @@ public class UserService {
 	public UserService(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
-	public void join_Member(UserVO member) {
+	public boolean join_Member(UserVO member) {
 		userRepository.save(member);
+		return false;
 	}
 
 	public List<UserVO> findAll() {

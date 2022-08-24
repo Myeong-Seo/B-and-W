@@ -8,4 +8,7 @@ public interface SDJShopRepository extends JpaRepository<ShopVO, Long>, ShopRepo
     @Override
     Optional<ShopVO> findBysindex(Long sindex);
 
+    @Override
+    ShopVO save(ShopVO shop);
+
 }
